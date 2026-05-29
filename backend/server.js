@@ -22,6 +22,7 @@ app.use(cors({
     'http://localhost:5173',
     'http://localhost:5174',
     'http://localhost:3000',
+    'https://supply-chain-chatbot-frontend-1.onrender.com',
     process.env.FRONTEND_URL,
   ].filter(Boolean),
   credentials: true,
