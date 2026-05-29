@@ -26,7 +26,7 @@ const upload = multer({
 });
 
 /* ── CLIENTS ─────────────────────────────────────────────── */
-const groq = new Groq({ apiKey: process.env.groq_API_KEY });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const hf = new HfInference(process.env.HUGGINGFACE_API_KEY);
 const qdrant = new QdrantClient({
   url: process.env.QDRANT_URL,
