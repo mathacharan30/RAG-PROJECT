@@ -1,4 +1,12 @@
 require('dotenv').config();
+
+const REQUIRED_ENV = ['GROQ_API_KEY', 'HUGGINGFACE_API_KEY', 'QDRANT_URL', 'QDRANT_API_KEY'];
+const missing = REQUIRED_ENV.filter(k => !process.env[k]);
+if (missing.length) {
+  console.error('❌ Missing required environment variables:', missing.join(', '));
+  process.exit(1);
+}
+
 const express = require('express');
 const cors = require('cors');
 const multer = require('multer');
