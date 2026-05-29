@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { Send, Sparkles, User, ChevronDown, RotateCcw } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
-const API = 'http://localhost:8080';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 const SUGGESTIONS = [
   'Summarize the key topics in the knowledge base',

@@ -4,7 +4,7 @@ import {
   Loader2, File, FolderOpen, Type, Database,
 } from 'lucide-react';
 
-const API = 'http://localhost:8080';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 function StatusBanner({ status }) {
   if (!status) return null;
